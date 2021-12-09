@@ -1,0 +1,75 @@
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px 40px 80px 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button {
+    background: rgb(101, 101, 253);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 40px;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.actions {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+  
+.eat {
+    position: relative;
+    width: 180px;
+    height: 40px;
+    background: black;
+    transition: height 0.3s ease;
+}
+  
+.eat button {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+    background: blue;
+    z-index: 2;
+    color: white;
+}
+  
+.food {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width:100%;
+}
+  
+.food > * {
+    height: 40px;
+    background: #89CFF0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow:1;
+    transition: filter 0.3s ease;
+}
+
+.food > *:hover {
+    filter: brightness(90%);
+}
+  
+.eat.active {
+    height: 80px;
+}
